@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 class FiguraMenu{
@@ -6,27 +7,28 @@ class FiguraMenu{
 
     Scanner scan = new Scanner(System.in);
     String opcion;
-    double base;
-    double altura;
+    double base=0;
+    double altura=0;
     double resultado=0;
+    double a=0;
 
 
    do{
 
     System.out.println("Bienvenido al programa de calculo de areas y perimetros");
-    System.out.println("1 para calcular el area de un cuadrado");
-    System.out.println("2 para calcular el area de un triangulo");
-    System.out.println("3 para calcular el area de un circulo");
-    System.out.println("4 para calcular el area de un rectangulo");
-    System.out.println("5 para calcular el area de un rombo");
-    System.out.println("6 para calcular el area de un hexagono");
-    System.out.println("7 para calcular el perimetro de un cuadrado");
-    System.out.println("8 para calcular el perimetro de un triangulo");
-    System.out.println("9 para calcular el perimetro de un circulo");
-    System.out.println("10 para calcular el perimetro de un rectangulo");
-    System.out.println("11 para calcular el perimetro de un rombo");
-    System.out.println("12 para calcular el perimetro de un hexagono");
-    System.out.println("S para salir");
+    System.out.println("[1] para calcular el area de un cuadrado");
+    System.out.println("[2] para calcular el area de un triangulo");
+    System.out.println("[3] para calcular el area de un circulo");
+    System.out.println("[4] para calcular el area de un rectangulo");
+    System.out.println("[5] para calcular el area de un rombo");
+    System.out.println("[6] para calcular el area de un hexagono");
+    System.out.println("[7] para calcular el perimetro de un cuadrado");
+    System.out.println("[8] para calcular el perimetro de un triangulo");
+    System.out.println("[9] para calcular el perimetro de un circulo");
+    System.out.println("[10] para calcular el perimetro de un rectangulo");
+    System.out.println("[11] para calcular el perimetro de un rombo");
+    System.out.println("[12] para calcular el perimetro de un hexagono");
+    System.out.println("[S] para salir");
     
 
     opcion = System.console().readLine();
@@ -35,17 +37,24 @@ class FiguraMenu{
 
         case "1":
             System.out.println("Ingresa el valor de un lado");
-            base = scan.nextDouble();
+            /*
+            a=leer();
+            if(a==-1){
+                System.out.println("Ingrese un valor valido");
+                continue;
+            }
+            */
+            base = a;
             resultado = base * base;
-            System.out.println("El area del cuadrado es: "+ resultado);
+            System.out.println("El area del cuadrado es: " + resultado);
         break;
         case "2":
             System.out.println("Ingresa el valor de la base");
-            base = scan.nextDouble();
+            leer();
             System.out.println("Ingresa el valor de la altura");
             altura = scan.nextDouble();
             resultado = (base * altura)/2;
-            System.out.println("El area del triangulo es: "+ resultado);
+            System.out.println("El area del triangulo es: " + resultado);
         break;
         case "3":
             System.out.println("Ingresa el valor del radio");
@@ -58,7 +67,7 @@ class FiguraMenu{
             System.out.println("Ingresa el valor para la altura");
             altura = scan.nextDouble();
             resultado = base * altura;
-            System.out.println("El area del rectangulo es: "+resultado);
+            System.out.println("El area del rectangulo es: " + resultado);
         break;
         case "5":
             System.out.println("Ingresa el valor para la Diagonal mayor");
@@ -66,7 +75,7 @@ class FiguraMenu{
             System.out.println("Ingresa el valor para la Diagonal menor");
             altura = scan.nextDouble();
             resultado = (base * altura)/2;
-            System.out.println("El area del rombo es: "+resultado);
+            System.out.println("El area del rombo es: " + resultado);
         break;
         case "6":
             System.out.println("Ingresa el valor del perimetro");
@@ -74,37 +83,66 @@ class FiguraMenu{
             System.out.println("Ingresa el valor de la apotema");
             altura = scan.nextDouble();
             resultado = (base * altura)/2;
-            System.out.println("El area del hexagono es: "+resultado);
+            System.out.println("El area del hexagono es: " + resultado);
         break;
         case "7":
             System.out.println("Ingresa el valor de lado");
             base = scan.nextDouble();
             resultado = base * 4;
-            System.out.println("El perimetro del cuadrado es: "+resultado);
+            System.out.println("El perimetro del cuadrado es: " + resultado);
         break;
         case "8":
             System.out.println("Ingresa el valor de un lado");
             base = scan.nextDouble();
             resultado = base * 3;
-            System.out.println("El perimetro del triangulo es: "+resultado);
+            System.out.println("El perimetro del triangulo es: " + resultado);
         break;
         case "9":
             System.out.println("Ingrese el valor del radio");
             base = scan.nextDouble();
             resultado = (2 * 3.14) * base;
-            System.out.println("El perimetro del circulo es: "+resultado);
+            System.out.println("El perimetro del circulo es: " + resultado);
         break;
         case "10":
             System.out.println("Ingrese");
-            break;
+            System.out.println("Ingrese");
+        break;
+        case "11":
+            System.out.println("Ingrese");
+            System.out.println("Ingrese");
+        break;
+        case "12":
+            System.out.println("Ingrese");
+            System.out.println("Ingrese");
+        break;
+        case "S":
+        System.out.println("Gracias por venir");
+        break;
+        case "s":
+        System.out.println("Gracias por venir");
+        break;
         default:
             System.out.println("Ingresa un dato valido plox");
         break;
         }
-/*   
+     
+    }while(!opcion.equalsIgnoreCase("S"));
+    /*   
     System.out.print("\033[H\033[2J");
     System.out.flush();
-  */      
-    }while(!opcion.equalsIgnoreCase("S"));
+  */ 
   }
+
+  public static double leer (){
+      double n;
+      Scanner scan = new Scanner(System.in);
+      try {
+        n = scan.nextDouble();
+            return n;
+        } catch (InputMismatchException e) {
+            return -1;
+        }
+
+  }
+
 }
