@@ -229,7 +229,7 @@ class FiguraMenu {
 		}
     }
 	public void menu() {
-	    String opcion;
+	    String opcion = " ";
 
 
 	   do{
@@ -251,7 +251,7 @@ class FiguraMenu {
 	    System.out.println("[S] Para salir");
         
 
-	    opcion = System.console().readLine();
+	    opcion = scan.nextLine();
 
 	    switch(opcion){
 	   
