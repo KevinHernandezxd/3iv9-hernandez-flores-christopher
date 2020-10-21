@@ -12,9 +12,14 @@ class FiguraMenu {
 		try {
             System.out.println("Ingresa el valor de un lado");
             base = scan.nextDouble();
-            resultado = base * base;
-            System.out.println("El area del cuadrado es: "+ resultado);
-            System.out.println();            
+            if(base > 0){
+                resultado = base * base;
+                System.out.println("El area del cuadrado es: "+ resultado);
+                System.out.println();
+            }else{
+                System.out.println("Ingrese un valor valido");
+                System.out.println();
+            }            
 		}catch(NumberFormatException e) {
         }finally {
             menu();	
@@ -27,9 +32,14 @@ class FiguraMenu {
             base = scan.nextDouble();
             System.out.println("Ingresa el valor de la altura");
             altura = scan.nextDouble();
-            resultado = (base * altura)/2;
-            System.out.println("El area del triangulo es: "+ resultado);
-            System.out.println();
+            if(base > 0 && altura > 0){
+                resultado = (base * altura)/2;
+                System.out.println("El area del triangulo es: "+ resultado);
+                System.out.println();
+            }else{
+                System.out.println("Ingrese un dato valido");
+                System.out.println();
+            }
         }catch(NumberFormatException e){
         }finally{
             menu();
@@ -40,8 +50,13 @@ class FiguraMenu {
         try{
         System.out.println("Ingresa el valor del radio");
         base = scan.nextDouble();
-        resultado = (base * base) * 3.1416;
-        System.out.println("El area del circulo es: " + resultado);
+        if(base > 0){
+            resultado = (base * base) * 3.1416;
+            System.out.println("El area del circulo es: " + resultado);
+        }else{
+            System.out.println("Ingrese un valor valido");
+            System.out.println();
+        }      
         }catch(NumberFormatException e){
         }finally{
             menu();
@@ -54,9 +69,14 @@ class FiguraMenu {
         base = scan.nextDouble();
         System.out.println("Ingresa el valor para la altura");
         altura = scan.nextDouble();
-        resultado = base * altura;
-        System.out.println("El area del rectangulo es: "+resultado);
-        System.out.println();
+        if(base > 0 && altura > 0){
+            resultado = base * altura;
+            System.out.println("El area del rectangulo es: "+resultado);
+            System.out.println();
+        }else{
+            System.out.println("Ingrese un dato valido");
+            System.out.println();
+        }
         }catch(NumberFormatException e) {
         }finally {
             menu();	
@@ -69,9 +89,13 @@ class FiguraMenu {
         base = scan.nextDouble();
         System.out.println("Ingresa el valor para la Diagonal menor");
         altura = scan.nextDouble();
-        resultado = (base * altura)/2;
-        System.out.println("El area del rombo es: "+resultado);
-        System.out.println();
+        if(base > 0 && altura > 0){
+            resultado = (base * altura)/2;
+            System.out.println("El area del rombo es: "+resultado);
+            System.out.println();
+        }else{
+            System.out.println("Ingrese un dato valido");
+        }
         }catch(NumberFormatException e) {
         }finally {
             menu();	
@@ -84,9 +108,14 @@ class FiguraMenu {
         base = scan.nextDouble();
         System.out.println("Ingresa el valor de la apotema");
         altura = scan.nextDouble();
-        resultado = (base * altura)/2;
-        System.out.println("El area del hexagono es: "+resultado);
-        System.out.println();
+        if(base > 0 && altura > 0){
+            resultado = (base * altura)/2;
+            System.out.println("El area del hexagono es: "+resultado);
+            System.out.println();
+        }else{
+            System.out.println("Ingrese un dato valido");
+            System.out.println();
+        }
         }catch(NumberFormatException e) {
         }finally {
             menu();	
@@ -97,9 +126,14 @@ class FiguraMenu {
         try{
         System.out.println("Ingresa el valor de lado");
         base = scan.nextDouble();
-        resultado = base * 4;
-        System.out.println("El perimetro del cuadrado es: "+resultado);
-        System.out.println();
+        if(base > 0){
+            resultado = base * 4;
+            System.out.println("El perimetro del cuadrado es: "+resultado);
+            System.out.println();
+        }else{
+            System.out.println("Ingrese un valor valido");
+            System.out.println();
+        }      
         }catch(NumberFormatException e) {
         }finally {
             menu();	
@@ -110,9 +144,14 @@ class FiguraMenu {
         try{
         System.out.println("Ingresa el valor de un lado");
         base = scan.nextDouble();
-        resultado = base * 3;
-        System.out.println("El perimetro del triangulo es: "+resultado);
-        System.out.println();
+        if(base > 0){
+            resultado = base * 3;
+            System.out.println("El perimetro del triangulo es: "+resultado);
+            System.out.println();
+        }else{
+            System.out.println("Ingrese un valor valido");
+            System.out.println();
+        }      
         }catch(NumberFormatException e) {
 		}finally {
             menu();	
@@ -123,9 +162,14 @@ class FiguraMenu {
         try{
         System.out.println("Ingrese el valor del radio");
         base = scan.nextDouble();
-        resultado = (2 * 3.14) * base;
-        System.out.println("El perimetro del circulo es: "+resultado);
-        System.out.println();
+        if(base > 0){
+            resultado = (2 * 3.14) * base;
+            System.out.println("El perimetro del circulo es: "+resultado);
+            System.out.println();
+        }else{
+            System.out.println("Ingrese un valor valido");
+            System.out.println();
+        }      
         }catch(NumberFormatException e) {
 		}finally {
             menu();	
@@ -137,9 +181,14 @@ class FiguraMenu {
         base = scan.nextDouble();
         System.out.println("Ingrese el valor de la altura");
         altura = scan.nextDouble();
-        resultado = (base*2)+(altura*2);
-        System.out.println("El perimetro del rectangulo es: " + resultado);
-        System.out.println();
+        if(base > 0 && altura > 0){
+            resultado = (base*2)+(altura*2);
+            System.out.println("El perimetro del rectangulo es: " + resultado);
+            System.out.println();
+        }else{
+            System.out.println("Ingrese un dato valido");
+            System.out.println();
+        }
         }catch(NumberFormatException e) {
 		}finally {
             menu();	
@@ -149,9 +198,14 @@ class FiguraMenu {
         try{
         System.out.println("Ingrese el valor de un lado");
         base = scan.nextDouble();
-        resultado = base*4;
-        System.out.println("El perimetro del rombo es: " + resultado);
-        System.out.println();
+        if(base > 0){
+            resultado = base*4;
+            System.out.println("El perimetro del rombo es: " + resultado);
+            System.out.println();
+        }else{
+            System.out.println("Ingrese un valor valido");
+            System.out.println();
+        }      
         }catch(NumberFormatException e) {
 		}finally {
             menu();	
@@ -161,9 +215,14 @@ class FiguraMenu {
         try{
         System.out.println("Ingrese el valor de un lado");
         base = scan.nextDouble();
-        resultado = base * 6;
-        System.out.println("El perimetro del hexagono es: " +  resultado);
-        System.out.println();
+        if(base > 0){
+            resultado = base * 6;
+            System.out.println("El perimetro del hexagono es: " +  resultado);
+            System.out.println();
+        }else{
+            System.out.println("Ingrese un valor valido");
+            System.out.println();
+        }      
         }catch(NumberFormatException e) {
 		}finally {
             menu();	

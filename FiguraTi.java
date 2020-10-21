@@ -11,10 +11,15 @@ class FiguraTi{
 	public void cuadrado() {
 		try {
         System.out.println("Ingresa el valor de un lado");
-        base = scan.nextDouble();
-        resultado = base * base;
-        System.out.println("El area del cuadrado es: "+ resultado);
-        System.out.println();
+		base = scan.nextDouble();
+		if(base > 0){
+			resultado = base * base;
+			System.out.println("El area del cuadrado es: "+ resultado);
+			System.out.println();
+		}else{
+			System.out.println("Ingrese un dato valido");
+			continue;
+		}
 		}catch(NumberFormatException e) {
 		}finally {
 			menu();	
@@ -115,7 +120,6 @@ class FiguraTi{
 	    
 
 	    opcion = System.console().readLine();
-	    System.out.println(opcion);
 
 	    switch(opcion){
 	   
