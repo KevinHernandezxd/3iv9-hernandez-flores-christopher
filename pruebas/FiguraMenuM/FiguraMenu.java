@@ -24,91 +24,89 @@ class FiguraMenu{
 		
 	public void cuadrado() {		
 		base = getNumero("Ingresa el valor del lado", scan);
-    	resultado = base * base;
-    	System.out.println("El area del cuadrado es: "+ resultado);
-    	System.out.println();
+        if(base > 0){
+            resultado = base * base;
+            System.out.println("El area del cuadrado es: "+ resultado);
+            System.out.println();
+        }
 	}
 	
 	public void triangulo() {
         base = getNumero("Ingresa el valor de la base", scan);
         altura = getNumero("Ingresa el valor de la altura", scan);
-        resultado = (base * altura)/2;
-        System.out.println("El area del triangulo es: "+ resultado);
-        System.out.println();
+        if(base > 0 && altura > 0){
+            resultado = (base * altura)/2;
+            System.out.println("El area del triangulo es: "+ resultado);
+            System.out.println();
+        }
 	}
 	
 	public void circulo() {
         base = getNumero("Ingresa el valor del radio", scan);
-        resultado = (base * base) * 3.1416;
-        System.out.println("El area del circulo es: "+ resultado);
-        System.out.println();
+        if(base > 0){
+            resultado = (base * base) * 3.1416;
+            System.out.println("El area del circulo es: "+ resultado);
+            System.out.println();
+        }
 	}
 	
 	public void rectangulo() {
         base = getNumero("Ingresa el valor de la base", scan);
         altura = getNumero("Ingresa el valor de la altura", scan);
-        resultado = base * altura;
-        System.out.println("El area del rectangulo es: "+resultado);
-        System.out.println();
+        if(base > 0 && altura > 0){
+            resultado = base * altura;
+            System.out.println("El area del rectangulo es: "+resultado);
+            System.out.println();
+        }else{
+        }
 	}
 	
 	public void rombo() {
         base = getNumero("Ingresa el valor de la Diagonal mayor", scan);
         altura = getNumero("Ingresa el valor de la Diagonal menor", scan);
-        resultado = (base * altura)/2;
-        System.out.println("El area del rombo es: "+resultado);
-        System.out.println();
+        if(base > 0 && altura > 0){
+            resultado = (base * altura)/2;
+            System.out.println("El area del rombo es: "+resultado);
+            System.out.println();
+        }
 	}
 	
 	public void hexagono() {
         base = getNumero("Ingresa el valor del perimetro", scan);
         altura = getNumero("Ingresa el valor de la apotema", scan);
-        resultado = (base * altura)/2;
-        System.out.println("El area del hexagono es: "+resultado);
-        System.out.println();
+        if(base > 0 && altura > 0){
+            resultado = (base * altura)/2;
+            System.out.println("El area del hexagono es: "+resultado);
+            System.out.println();
+        }
 	}
 	
 	public void perimetroCuadrado() {
         base = getNumero("Ingresa el valor de lado", scan);
-        resultado = base * 4;
-        System.out.println("El perimetro del cuadrado es: "+resultado);
-        System.out.println();
+        if(base > 0){
+            resultado = base * 4;
+            System.out.println("El perimetro del cuadrado es: "+resultado);
+            System.out.println();
+        }
 	}
 	
 	public void perimetroTriangulo() {
         base = getNumero("Ingresa el valor de un lado", scan);
-        resultado = base * 3;
-        System.out.println("El perimetro del triangulo es: "+resultado);
-        System.out.println();
+        if(base > 0){
+            resultado = base * 3;
+            System.out.println("El perimetro del triangulo es: "+resultado);
+            System.out.println();
+        }
 	}
 	
 	public void perimetroCirculo() {
         base = getNumero("Ingresa el valor del radio", scan);
-        resultado = (2 * 3.14) * base;
-        System.out.println("El perimetro del circulo es: "+resultado);
-        System.out.println();
-    }
-    public void perimetroRectangulo() {
-        base = getNumero("Ingresa el valor de la base", scan);
-        altura = getNumero("Ingresa el valor de la altura", scan);
-        resultado = (altura * 2) + (base * 2);
-        System.out.println("El perimetro del rectangulo es: "+resultado);
-        System.out.println();
-    }
-    public void perimetroRombo() {
-        base = getNumero("Ingresa el valor de un lado", scan);
-        resultado = base * 4;
-        System.out.println("El perimetro del rectangulo es: "+resultado);
-        System.out.println();
-    }
-    public void perimetroHexagono() {
-        base = getNumero("Ingresa el valor de un lado", scan);
-        resultado = base * 6;
-        System.out.println("El perimetro del rectangulo es: "+resultado);
-        System.out.println();
-    }
-    
-    
+        if(base > 0){
+            resultado = (2 * 3.14) * base;
+            System.out.println("El perimetro del circulo es: "+resultado);
+            System.out.println();
+        }
+	}
 	public void menu() {	
 		String opcion = " ";
 		boolean salir=false;
@@ -163,15 +161,9 @@ class FiguraMenu{
 		        case "9":
 		        	perimetroCirculo();
 		        break;
-		        case "10":
-		            perimetroRectangulo();
-                break;
-                case "11":
-                    perimetroRombo();
-                break;
-                case "12":
-                    perimetroHexagono();
-                break;
+		        case "0":
+		            System.out.println("Ingrese");
+		            break;
 		        case "s":
 		        case "S":
 		        	salir=true;
