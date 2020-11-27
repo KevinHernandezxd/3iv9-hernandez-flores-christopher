@@ -37,6 +37,8 @@ public class EstructuraDatos{
         boolean salir = false;
 
         do{
+        System.out.println("3iv9_hernandez_flores_christopher_kevin");
+        System.out.println();
         System.out.println("Bienvenido al programa de calculo de areas y perimetros");
 	    System.out.println();
 	    System.out.println("[1] Programa de descuentos");

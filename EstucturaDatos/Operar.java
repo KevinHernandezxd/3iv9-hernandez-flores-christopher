@@ -44,11 +44,6 @@ public class Operar extends JFrame implements ActionListener {
   cerrar.setBounds(100, 200, 100, 50);
   add(cerrar);
   cerrar.addActionListener(this);
-  
-  acerca = new JButton("About");
-  acerca.setBounds(100, 260, 100, 50);
-  add(acerca);
-  acerca.addActionListener(this);
   //labels
   titulo = new JLabel("Calculadora");
   titulo.setBounds(130, 40, 200, 30);
